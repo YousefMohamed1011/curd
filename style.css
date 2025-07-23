@@ -58,50 +58,68 @@ button:hover {
   display: flex;
   gap: 20px;
 }
+
 .table {
   width: 100%;
-  text-align: center;
+  border-collapse: collapse;
   overflow-x: auto;
 }
-
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #444;
+}
 .table button {
   width: fit-content;
+  padding: 5px 10px;
 }
+
 @media (max-width: 768px) {
   .container {
     width: 95%;
     margin: 0 auto;
   }
-
   .table th,
   .table td {
     font-size: 12px;
     padding: 6px;
   }
-
   button {
     font-size: 14px;
+  }
+  .crud {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 480px) {
   .table {
-    width: 50%;
-    text-align: center;
+    width: 100%;
     overflow-x: auto;
+    display: block;
+  }
+  .table tr {
+    display: table-row;
+  }
+  .table th,
+  .table td {
+    font-size: 10px;
+    padding: 5px;
+    white-space: nowrap;
+  }
+  .input .price input {
+    flex: 1 1 40%;
+  }
+  button {
+    font-size: 14px;
+    padding: 8px 6px;
+  }
+  .input .price {
+    flex-wrap: wrap;
   }
   #total {
-    font-size: 14px;
-    padding: 4px 10px;
-  }
-
-  input {
-    height: 28px;
-    font-size: 14px;
-  }
-
-  button {
-    font-size: 13px;
-    padding: 8px 6px;
+    margin-bottom: 10px;
   }
 }
